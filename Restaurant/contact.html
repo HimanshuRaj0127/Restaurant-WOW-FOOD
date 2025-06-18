@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title>Restaurant Contact Section - Wow Food</title>
+<link rel="stylesheet" href="hohicss">
+<style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #f7fafc, #e0e7ff);
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    line-height: 1.5;
+    padding: 24px 16px;
+    display: flex;
+    justify-content: center;
+  }
+  main.container {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255 255 255 / 0.72);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(99, 102, 241, 0.18);
+    padding: 40px 32px;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 150px;
+  }
+  h2.section-title {
+    text-align: center;
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p.section-description {
+    text-align: center;
+    max-width: 600px;
+    color: #475569;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin: 0 auto 40px;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  @media (max-width: 700px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.15rem;
+    color: #334155;
+  }
+  .info-icon {
+    font-size: 32px;
+    color: #6366f1;
+    flex-shrink: 0;
+  }
+  .social-links {
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+  }
+  .social-link:hover,
+  .social-link:focus {
+    background: linear-gradient(135deg, #4338ca, #0891b2);
+    outline: none;
+  }
+  .social-link:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+  }
+  form.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1e293b;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    border-radius: 12px;
+    border: 2px solid #cbd5e1;
+    background: white;
+    color: #1e293b;
+    resize: vertical;
+    min-height: 44px;
+  }
+  textarea {
+    min-height: 100px;
+  }
+  .error-message {
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: none;
+  }
+  button[type="submit"] {
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 8px 16px rgb(99 102 241 / 0.4);
+    user-select: none;
+  }
+  .material-icons {
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+      <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Categories</a>
+                    </li>
+                    <li>
+                        <a href="foods.html">Foods</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+<main class="container" role="main" aria-label="Contact section">
+  <img src="logo.png" alt="Wow Food Logo" class="logo" />
+  <h2 class="section-title">Get in Touch with Wow Food</h2>
+  <p class="section-description">Have questions, feedback, or want to make a reservation? Send us a message and we'll get right back to you.</p>
+  <div class="contact-grid">
+    <section class="contact-info" aria-label="Contact information">
+      <div class="info-item">
+        <span class="material-icons info-icon" aria-hidden="true">location_on</span>
+        <address>
+          123 Flavor Street,<br />
+          Culinary City, FL 54321<br />
+          United States
+        </address>
+      </div>
+      <div class="info-item">
+        <span class="material-icons info-icon" aria-hidden="true">phone</span>
+        <a href="tel:+12345678900" aria-label="Phone Number">+1 (234) 567-8900</a>
+      </div>
+      <div class="info-item">
+        <span class="material-icons info-icon" aria-hidden="true">email</span>
+        <a href="mailto:contact@wowfood.com" aria-label="Email Address">contact@wowfood.com</a>
+      </div>
+      <div class="info-item" aria-label="Social media links">
+        <nav class="social-links" aria-label="Social media navigation">
+          <a href="https://facebook.com/wowfood" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+            <span class="material-icons" aria-hidden="true">facebook</span>
+          </a>
+          <a href="https://twitter.com/wowfood" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+            <span class="material-icons" aria-hidden="true">twitter</span>
+          </a>
+          <a href="https://instagram.com/wowfood" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+            <span class="material-icons" aria-hidden="true">instagram</span>
+          </a>
+          <a href="https://linkedin.com/company/wowfood" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <span class="material-icons" aria-hidden="true">linkedin</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <section>
+      <form class="contact-form" novalidate aria-label="Contact form">
+        <div>
+          <label for="name">Full Name <sup aria-hidden="true" style="color: #ef4444">*</sup></label>
+          <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" />
+        </div>
+        <div>
+          <label for="email">Email Address <sup aria-hidden="true" style="color: #ef4444">*</sup></label>
+          <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" />
+        </div>
+        <div>
+          <label for="message">Message <sup aria-hidden="true" style="color: #ef4444">*</sup></label>
+          <textarea id="message" name="message" required aria-required="true" placeholder="Write your message here..."></textarea>
+        </div>
+        <button type="submit">
+          <span class="material-icons" aria-hidden="true">send</span> Send Message
+        </button>
+      </form>
+    </section>
+  </div>
+</main>
+</body>
+</html>
